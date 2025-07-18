@@ -1,0 +1,38 @@
+// Typing animation
+const texts = ["Anjali", "a Web Developer", "a Data Scientist"];
+let i = 0, j = 0, currentText = "", isDeleting = false;
+
+function type() {
+  const display = document.getElementById("typed");
+  if (!display) return;
+
+  if (i < texts.length) {
+    if (!isDeleting && j <= texts[i].length) {
+      currentText = texts[i].slice(0, j++);
+      display.innerHTML = currentText;
+    } else if (isDeleting && j >= 0) {
+      currentText = texts[i].slice(0, j--);
+      display.innerHTML = currentText;
+    }
+
+    if (j === texts[i].length) isDeleting = true;
+    if (isDeleting && j === 0) {
+      isDeleting = false;
+      i = (i + 1) % texts.length;
+    }
+  }
+
+  setTimeout(type, isDeleting ? 100 : 150);
+}
+
+type();
+
+// Dark Mode Toggle
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+// Dummy send mail
+function sendMail() {
+  alert("Thanks! Your message was sent ✅");
+}
