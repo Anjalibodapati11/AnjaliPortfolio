@@ -1,5 +1,5 @@
  Introduction:
-This project is a personal portfolio website created to showcase my skills, projects, education, and contact information in a professional and modern way. It serves as a digital resume that allows potential employers, clients, and collaborators to learn more about me.
+ This project is a personal portfolio website created to showcase my skills, projects, education, and contact information in a professional and modern way. It serves as a digital resume that allows potential employers, clients, and collaborators to learn more about me.
 
 Objective:
 The main goal of this project is to:
